@@ -46,7 +46,8 @@ function PasswordGenerator() {
       <div
         className="w-11/12 md:w-9/12 p-4 rounded-xl"
         style={{
-          backgroundImage: "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)",
+          // backgroundImage: "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)",
+          backgroundImage:"url(https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
           boxShadow:
             "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
         }}
@@ -57,13 +58,13 @@ function PasswordGenerator() {
         <div className="flex items-center gap-3 justify-center">
           <div
             style={{ backgroundColor: "#A9A9A9" }}
-            className="text-center h-8 md:h-12 flex justify-center items-center w-11/12 mt-3"
+            className="text-center h-8 md:h-12 flex justify-center items-center w-11/12 mt-3 rounded-lg "
           >
             <p className="text-white text-xl md:text-3xl">{password}</p>
           </div>
           <div>
             <button onClick={copyToClipboard}>
-              <i className="fa-solid fa-copy text-3xl md:text-5xl cursor-pointer"></i>
+              <i className="fa-solid fa-copy text-3xl md:text-5xl cursor-pointer hover:text-gray-500"></i>
             </button>
           </div>
         </div>
@@ -120,7 +121,7 @@ function PasswordGenerator() {
               type="number"
               value={characters}
               onChange={(e) => setCharscters(Number(e.target.value))}
-              className="border border-black w-12 text-center rounded-lg"
+              className="border border-black w-12 text-center rounded-lg text-black"
             />
             <p className=" text-xs text-red-600">* Between 8-15</p>
           </div>
