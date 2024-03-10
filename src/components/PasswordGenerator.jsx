@@ -8,13 +8,15 @@ function PasswordGenerator() {
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeSymbols, setIncludeSymbols] = useState(true);
 
+  if(characters===0)setCharscters("")
+
   function generatePassword() {
     let allCharater = "";
 
     if (includeUppercase) allCharater += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (includeLowercase) allCharater += "abcdefghijklmnopqrstuvwxyz";
     if (includeNumbers) allCharater += "1234567890";
-    if (includeSymbols) allCharater += "~`!@#$%^&*()_-+={}[]|\"':;?/>.<,";
+    if (includeSymbols) allCharater += "!@#$%^&*(){}[]|\?/><";
     // console.log(allCharater);
     if (allCharater.length == 0) {
       alert("you have to check atleast one");
