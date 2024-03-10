@@ -34,7 +34,7 @@ function PasswordGenerator() {
 
   function copyToClipboard() {
     if (password.length == 0) {
-      alert("Please check the ckeckbox");
+      alert("Password not available");
     } else {
       navigator.clipboard.writeText(password);
       alert("Password copy Done");
